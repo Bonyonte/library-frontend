@@ -8,12 +8,12 @@ const Library = () => {
     const [books, setBooks] = useState([]);
     const [ search, setSearch] = useState(" ");
 
-    // useEffect(() => {
-    //     fetch('http://localhost:3000/Books')
-    //     .then(r =>r.json())
-    //     .then((data) => setBooks(data))
+    useEffect(() => {
+        fetch('http://localhost:3000/Books')
+        .then(r =>r.json())
+        .then((data) => setBooks(data))
         
-    // },[])
+    },[])
 
     const searchBook = (e) =>{
       if(e.key==="Enter"){
